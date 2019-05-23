@@ -20,7 +20,7 @@ class webhook::install {
         group => 'root',
         source => 'puppet:///modules/webhook/rpms/webhook-2.5.0-3.x86_64.rpm'
       } ->
-      package { 'webhook-2.5.0-3.x86_64'
+      package { 'webhook-2.5.0-3.x86_64':
         ensure => 'installed',
         provider => 'rpm',
         source => '/root/rpms/webhook-2.5.0-3.x86_64.rpm',
