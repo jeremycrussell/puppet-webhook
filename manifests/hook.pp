@@ -6,6 +6,6 @@ define webhook::hook (
 
   ::concat::fragment { "webhook ${title}":
     target  => '/etc/webhook.conf',
-    content => to_json($settings),
+    content => template('webhook/hook.erb'),
   }
 }
